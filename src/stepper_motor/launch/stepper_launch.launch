@@ -1,0 +1,13 @@
+<!-- launch.launch -->
+
+<launch>
+
+    <group ns="steppers">
+        <param name="config_path" value="/home/ubuntu/test/src/stepper_motor/steppers.json"/>
+
+        <!-- Nodes and configurations for the included launch file -->
+        <node pkg="stepper_motor" type="StepperLaunch.py" name="x_axis" output="screen" args="x"/>
+        <node pkg="stepper_motor" type="StepperLaunch.py" name="y_axis" output="screen" args="y"/>
+
+    </group>
+</launch>

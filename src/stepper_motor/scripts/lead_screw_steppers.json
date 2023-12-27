@@ -1,0 +1,28 @@
+{
+  "right_stepper": {
+    "set_speed": 100,
+    "max_speed": 120,
+    "min_speed": 0.5,
+    "accel": 30,
+    "deccel": 30,
+    "step_pin": 38,
+    "dir_pin": 40,
+    "lead": 200,
+    "length": 200,
+    "unit": 200,
+    "steps_per_rev": 200
+  },
+  "left_stepper": {
+    "set_speed": 100,
+    "max_speed": 120,
+    "min_speed": 0.5,
+    "accel": 30,
+    "deccel": 30,
+    "step_pin": 39,
+    "dir_pin": 37,
+    "lead": 200,
+    "length": 200,
+    "unit": 200,
+    "steps_per_rev": 200
+  }
+}

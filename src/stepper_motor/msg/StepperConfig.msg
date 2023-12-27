@@ -1,5 +1,5 @@
 Header header
-float32 set_speed
+float32 speed
 float32 max_speed
 float32 min_speed
 float32 accel

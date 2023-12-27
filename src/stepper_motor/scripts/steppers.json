@@ -1,0 +1,22 @@
+{
+  "/steppers/right": {
+    "set_speed": 100,
+    "max_speed": 120,
+    "min_speed": 0.5,
+    "accel": 30,
+    "deccel": 30,
+    "step_pin": 38,
+    "dir_pin": 40,
+    "steps_per_rev": 200
+  },
+  "/steppers/left": {
+    "set_speed": 100,
+    "max_speed": 120,
+    "min_speed": 0.5,
+    "accel": 30,
+    "deccel": 30,
+    "step_pin": 35,
+    "dir_pin": 37,
+    "steps_per_rev": 200
+  }
+}

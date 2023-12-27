@@ -1,8 +1,8 @@
 (cl:in-package stepper_motor-msg)
 (cl:export '(HEADER-VAL
           HEADER
-          SET_SPEED-VAL
-          SET_SPEED
+          SPEED-VAL
+          SPEED
           MAX_SPEED-VAL
           MAX_SPEED
           MIN_SPEED-VAL

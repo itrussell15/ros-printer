@@ -1,0 +1,7 @@
+set(stepper_motor_SETUP_PY_SETUP_MODULE "distutils.core")
+set(stepper_motor_SETUP_PY_VERSION "0.0.0")
+set(stepper_motor_SETUP_PY_SCRIPTS "")
+set(stepper_motor_SETUP_PY_PACKAGES "stepper_motor")
+set(stepper_motor_SETUP_PY_PACKAGE_DIRS "src/stepper_motor")
+set(stepper_motor_SETUP_PY_MODULES "")
+set(stepper_motor_SETUP_PY_MODULE_DIRS "")

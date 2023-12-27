@@ -9,11 +9,11 @@ import struct
 import std_msgs.msg
 
 class StepperConfig(genpy.Message):
-  _md5sum = "f33d563e99c62fa98073f3435668c039"
+  _md5sum = "ff43d43f44d3ccbde0bc997af21c6851"
   _type = "stepper_motor/StepperConfig"
   _has_header = True  # flag to mark the presence of a Header object
   _full_text = """Header header
-float32 set_speed
+float32 speed
 float32 max_speed
 float32 min_speed
 float32 accel
@@ -39,7 +39,7 @@ time stamp
 #Frame this data is associated with
 string frame_id
 """
-  __slots__ = ['header','set_speed','max_speed','min_speed','accel','deccel','step_pin','dir_pin','steps_per_rev']
+  __slots__ = ['header','speed','max_speed','min_speed','accel','deccel','step_pin','dir_pin','steps_per_rev']
   _slot_types = ['std_msgs/Header','float32','float32','float32','float32','float32','uint8','uint8','int64']
 
   def __init__(self, *args, **kwds):
@@ -50,7 +50,7 @@ string frame_id
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       header,set_speed,max_speed,min_speed,accel,deccel,step_pin,dir_pin,steps_per_rev
+       header,speed,max_speed,min_speed,accel,deccel,step_pin,dir_pin,steps_per_rev
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -61,8 +61,8 @@ string frame_id
       # message fields cannot be None, assign default values for those that are
       if self.header is None:
         self.header = std_msgs.msg.Header()
-      if self.set_speed is None:
-        self.set_speed = 0.
+      if self.speed is None:
+        self.speed = 0.
       if self.max_speed is None:
         self.max_speed = 0.
       if self.min_speed is None:
@@ -79,7 +79,7 @@ string frame_id
         self.steps_per_rev = 0
     else:
       self.header = std_msgs.msg.Header()
-      self.set_speed = 0.
+      self.speed = 0.
       self.max_speed = 0.
       self.min_speed = 0.
       self.accel = 0.
@@ -109,7 +109,7 @@ string frame_id
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_5f2Bq().pack(_x.set_speed, _x.max_speed, _x.min_speed, _x.accel, _x.deccel, _x.step_pin, _x.dir_pin, _x.steps_per_rev))
+      buff.write(_get_struct_5f2Bq().pack(_x.speed, _x.max_speed, _x.min_speed, _x.accel, _x.deccel, _x.step_pin, _x.dir_pin, _x.steps_per_rev))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -140,7 +140,7 @@ string frame_id
       _x = self
       start = end
       end += 30
-      (_x.set_speed, _x.max_speed, _x.min_speed, _x.accel, _x.deccel, _x.step_pin, _x.dir_pin, _x.steps_per_rev,) = _get_struct_5f2Bq().unpack(str[start:end])
+      (_x.speed, _x.max_speed, _x.min_speed, _x.accel, _x.deccel, _x.step_pin, _x.dir_pin, _x.steps_per_rev,) = _get_struct_5f2Bq().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -162,7 +162,7 @@ string frame_id
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_5f2Bq().pack(_x.set_speed, _x.max_speed, _x.min_speed, _x.accel, _x.deccel, _x.step_pin, _x.dir_pin, _x.steps_per_rev))
+      buff.write(_get_struct_5f2Bq().pack(_x.speed, _x.max_speed, _x.min_speed, _x.accel, _x.deccel, _x.step_pin, _x.dir_pin, _x.steps_per_rev))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -194,7 +194,7 @@ string frame_id
       _x = self
       start = end
       end += 30
-      (_x.set_speed, _x.max_speed, _x.min_speed, _x.accel, _x.deccel, _x.step_pin, _x.dir_pin, _x.steps_per_rev,) = _get_struct_5f2Bq().unpack(str[start:end])
+      (_x.speed, _x.max_speed, _x.min_speed, _x.accel, _x.deccel, _x.step_pin, _x.dir_pin, _x.steps_per_rev,) = _get_struct_5f2Bq().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill

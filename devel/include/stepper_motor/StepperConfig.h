@@ -26,7 +26,7 @@ struct StepperConfig_
 
   StepperConfig_()
     : header()
-    , set_speed(0.0)
+    , speed(0.0)
     , max_speed(0.0)
     , min_speed(0.0)
     , accel(0.0)
@@ -37,7 +37,7 @@ struct StepperConfig_
     }
   StepperConfig_(const ContainerAllocator& _alloc)
     : header(_alloc)
-    , set_speed(0.0)
+    , speed(0.0)
     , max_speed(0.0)
     , min_speed(0.0)
     , accel(0.0)
@@ -53,8 +53,8 @@ struct StepperConfig_
    typedef  ::std_msgs::Header_<ContainerAllocator>  _header_type;
   _header_type header;
 
-   typedef float _set_speed_type;
-  _set_speed_type set_speed;
+   typedef float _speed_type;
+  _speed_type speed;
 
    typedef float _max_speed_type;
   _max_speed_type max_speed;
@@ -107,7 +107,7 @@ template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::stepper_motor::StepperConfig_<ContainerAllocator1> & lhs, const ::stepper_motor::StepperConfig_<ContainerAllocator2> & rhs)
 {
   return lhs.header == rhs.header &&
-    lhs.set_speed == rhs.set_speed &&
+    lhs.speed == rhs.speed &&
     lhs.max_speed == rhs.max_speed &&
     lhs.min_speed == rhs.min_speed &&
     lhs.accel == rhs.accel &&
@@ -171,12 +171,12 @@ struct MD5Sum< ::stepper_motor::StepperConfig_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "f33d563e99c62fa98073f3435668c039";
+    return "ff43d43f44d3ccbde0bc997af21c6851";
   }
 
   static const char* value(const ::stepper_motor::StepperConfig_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xf33d563e99c62fa9ULL;
-  static const uint64_t static_value2 = 0x8073f3435668c039ULL;
+  static const uint64_t static_value1 = 0xff43d43f44d3ccbdULL;
+  static const uint64_t static_value2 = 0xe0bc997af21c6851ULL;
 };
 
 template<class ContainerAllocator>
@@ -196,7 +196,7 @@ struct Definition< ::stepper_motor::StepperConfig_<ContainerAllocator> >
   static const char* value()
   {
     return "Header header\n"
-"float32 set_speed\n"
+"float32 speed\n"
 "float32 max_speed\n"
 "float32 min_speed\n"
 "float32 accel\n"
@@ -240,7 +240,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.header);
-      stream.next(m.set_speed);
+      stream.next(m.speed);
       stream.next(m.max_speed);
       stream.next(m.min_speed);
       stream.next(m.accel);
@@ -269,8 +269,8 @@ struct Printer< ::stepper_motor::StepperConfig_<ContainerAllocator> >
     s << indent << "header: ";
     s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    s << indent << "set_speed: ";
-    Printer<float>::stream(s, indent + "  ", v.set_speed);
+    s << indent << "speed: ";
+    Printer<float>::stream(s, indent + "  ", v.speed);
     s << indent << "max_speed: ";
     Printer<float>::stream(s, indent + "  ", v.max_speed);
     s << indent << "min_speed: ";

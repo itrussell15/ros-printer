@@ -7,9 +7,11 @@ project(cartesian_controller)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  rospy
-  stepper_motor
+find_package(catkin REQUIRED
+    rospy
+    std_msgs
+    message_generation
+    stepper_motor
 )
 
 ## System dependencies are found with CMake's conventions
@@ -46,11 +48,10 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  CartesianMove.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -67,10 +68,11 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs  # Or other packages containing msgs
+  stepper_motor
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -102,9 +104,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
+
 #  INCLUDE_DIRS include
 #  LIBRARIES cartesian_controller
-#  CATKIN_DEPENDS rospy stepper_motor
+ CATKIN_DEPENDS stepper_motor
 #  DEPENDS system_lib
 )
 
@@ -116,7 +119,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-  ${catkin_INCLUDE_DIRS}
+# ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library

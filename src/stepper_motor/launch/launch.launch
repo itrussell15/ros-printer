@@ -1,0 +1,10 @@
+<!-- launch.launch -->
+
+<launch>
+
+    <group ns="steppers">
+        <!-- Nodes and configurations for the included launch file -->
+        <node pkg="stepper_motor" type="config_stepper.py" name="config" output="screen"/>
+        <node pkg="stepper_motor" type="StepperDriver.py" name="driver" output="screen"/>
+    </group>
+</launch>

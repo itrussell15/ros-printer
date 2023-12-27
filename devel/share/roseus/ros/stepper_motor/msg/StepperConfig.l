@@ -16,13 +16,13 @@
 
 (defclass stepper_motor::StepperConfig
   :super ros::object
-  :slots (_header _set_speed _max_speed _min_speed _accel _deccel _step_pin _dir_pin _steps_per_rev ))
+  :slots (_header _speed _max_speed _min_speed _accel _deccel _step_pin _dir_pin _steps_per_rev ))
 
 (defmethod stepper_motor::StepperConfig
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
-    ((:set_speed __set_speed) 0.0)
+    ((:speed __speed) 0.0)
     ((:max_speed __max_speed) 0.0)
     ((:min_speed __min_speed) 0.0)
     ((:accel __accel) 0.0)
@@ -33,7 +33,7 @@
     )
    (send-super :init)
    (setq _header __header)
-   (setq _set_speed (float __set_speed))
+   (setq _speed (float __speed))
    (setq _max_speed (float __max_speed))
    (setq _min_speed (float __min_speed))
    (setq _accel (float __accel))
@@ -49,9 +49,9 @@
      (progn
        (if __header (setq _header (car __header)))
        _header)))
-  (:set_speed
-   (&optional __set_speed)
-   (if __set_speed (setq _set_speed __set_speed)) _set_speed)
+  (:speed
+   (&optional __speed)
+   (if __speed (setq _speed __speed)) _speed)
   (:max_speed
    (&optional __max_speed)
    (if __max_speed (setq _max_speed __max_speed)) _max_speed)
@@ -78,7 +78,7 @@
    (+
     ;; std_msgs/Header _header
     (send _header :serialization-length)
-    ;; float32 _set_speed
+    ;; float32 _speed
     4
     ;; float32 _max_speed
     4
@@ -101,8 +101,8 @@
               (make-string-output-stream (send self :serialization-length)))))
      ;; std_msgs/Header _header
        (send _header :serialize s)
-     ;; float32 _set_speed
-       (sys::poke _set_speed (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _speed
+       (sys::poke _speed (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;; float32 _max_speed
        (sys::poke _max_speed (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;; float32 _min_speed
@@ -133,8 +133,8 @@
    (buf &optional (ptr- 0))
    ;; std_msgs/Header _header
      (send _header :deserialize buf ptr-) (incf ptr- (send _header :serialization-length))
-   ;; float32 _set_speed
-     (setq _set_speed (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _speed
+     (setq _speed (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;; float32 _max_speed
      (setq _max_speed (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;; float32 _min_speed
@@ -163,11 +163,11 @@
    self)
   )
 
-(setf (get stepper_motor::StepperConfig :md5sum-) "f33d563e99c62fa98073f3435668c039")
+(setf (get stepper_motor::StepperConfig :md5sum-) "ff43d43f44d3ccbde0bc997af21c6851")
 (setf (get stepper_motor::StepperConfig :datatype-) "stepper_motor/StepperConfig")
 (setf (get stepper_motor::StepperConfig :definition-)
       "Header header
-float32 set_speed
+float32 speed
 float32 max_speed
 float32 min_speed
 float32 accel
@@ -197,6 +197,6 @@ string frame_id
 
 
 
-(provide :stepper_motor/StepperConfig "f33d563e99c62fa98073f3435668c039")
+(provide :stepper_motor/StepperConfig "ff43d43f44d3ccbde0bc997af21c6851")
 
 

@@ -10,3 +10,4 @@
 (ros::load-ros-package "rosgraph_msgs")
 (ros::load-ros-package "std_msgs")
 (ros::load-ros-package "stepper_motor")
+(ros::load-ros-package "stepper_motor")

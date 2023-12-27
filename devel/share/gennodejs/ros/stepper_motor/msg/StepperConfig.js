@@ -20,7 +20,7 @@ class StepperConfig {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.header = null;
-      this.set_speed = null;
+      this.speed = null;
       this.max_speed = null;
       this.min_speed = null;
       this.accel = null;
@@ -36,11 +36,11 @@ class StepperConfig {
       else {
         this.header = new std_msgs.msg.Header();
       }
-      if (initObj.hasOwnProperty('set_speed')) {
-        this.set_speed = initObj.set_speed
+      if (initObj.hasOwnProperty('speed')) {
+        this.speed = initObj.speed
       }
       else {
-        this.set_speed = 0.0;
+        this.speed = 0.0;
       }
       if (initObj.hasOwnProperty('max_speed')) {
         this.max_speed = initObj.max_speed
@@ -91,8 +91,8 @@ class StepperConfig {
     // Serializes a message object of type StepperConfig
     // Serialize message field [header]
     bufferOffset = std_msgs.msg.Header.serialize(obj.header, buffer, bufferOffset);
-    // Serialize message field [set_speed]
-    bufferOffset = _serializer.float32(obj.set_speed, buffer, bufferOffset);
+    // Serialize message field [speed]
+    bufferOffset = _serializer.float32(obj.speed, buffer, bufferOffset);
     // Serialize message field [max_speed]
     bufferOffset = _serializer.float32(obj.max_speed, buffer, bufferOffset);
     // Serialize message field [min_speed]
@@ -116,8 +116,8 @@ class StepperConfig {
     let data = new StepperConfig(null);
     // Deserialize message field [header]
     data.header = std_msgs.msg.Header.deserialize(buffer, bufferOffset);
-    // Deserialize message field [set_speed]
-    data.set_speed = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [speed]
+    data.speed = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [max_speed]
     data.max_speed = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [min_speed]
@@ -148,14 +148,14 @@ class StepperConfig {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'f33d563e99c62fa98073f3435668c039';
+    return 'ff43d43f44d3ccbde0bc997af21c6851';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     Header header
-    float32 set_speed
+    float32 speed
     float32 max_speed
     float32 min_speed
     float32 accel
@@ -197,11 +197,11 @@ class StepperConfig {
       resolved.header = new std_msgs.msg.Header()
     }
 
-    if (msg.set_speed !== undefined) {
-      resolved.set_speed = msg.set_speed;
+    if (msg.speed !== undefined) {
+      resolved.speed = msg.speed;
     }
     else {
-      resolved.set_speed = 0.0
+      resolved.speed = 0.0
     }
 
     if (msg.max_speed !== undefined) {

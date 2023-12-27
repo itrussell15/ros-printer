@@ -1,0 +1,5 @@
+<!-- launch.launch -->
+<launch>
+    <include file="$(find stepper_motor)/launch/stepper_launch.launch"/>
+
+</launch>

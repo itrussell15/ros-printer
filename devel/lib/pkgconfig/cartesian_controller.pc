@@ -3,6 +3,6 @@ prefix=/home/ubuntu/test/devel
 Name: cartesian_controller
 Description: Description of cartesian_controller
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/ubuntu/test/devel/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: stepper_motor

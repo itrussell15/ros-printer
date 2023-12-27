@@ -2,7 +2,7 @@
 
 message(STATUS "stepper_motor: 5 messages, 0 services")
 
-set(MSG_I_FLAGS "-Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -383,6 +383,9 @@ endif()
 if(TARGET std_msgs_generate_messages_cpp)
   add_dependencies(stepper_motor_generate_messages_cpp std_msgs_generate_messages_cpp)
 endif()
+if(TARGET stepper_motor_generate_messages_cpp)
+  add_dependencies(stepper_motor_generate_messages_cpp stepper_motor_generate_messages_cpp)
+endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/stepper_motor)
   # install generated code
@@ -393,6 +396,9 @@ if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/st
 endif()
 if(TARGET std_msgs_generate_messages_eus)
   add_dependencies(stepper_motor_generate_messages_eus std_msgs_generate_messages_eus)
+endif()
+if(TARGET stepper_motor_generate_messages_eus)
+  add_dependencies(stepper_motor_generate_messages_eus stepper_motor_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/stepper_motor)
@@ -405,6 +411,9 @@ endif()
 if(TARGET std_msgs_generate_messages_lisp)
   add_dependencies(stepper_motor_generate_messages_lisp std_msgs_generate_messages_lisp)
 endif()
+if(TARGET stepper_motor_generate_messages_lisp)
+  add_dependencies(stepper_motor_generate_messages_lisp stepper_motor_generate_messages_lisp)
+endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/stepper_motor)
   # install generated code
@@ -416,6 +425,9 @@ endif()
 if(TARGET std_msgs_generate_messages_nodejs)
   add_dependencies(stepper_motor_generate_messages_nodejs std_msgs_generate_messages_nodejs)
 endif()
+if(TARGET stepper_motor_generate_messages_nodejs)
+  add_dependencies(stepper_motor_generate_messages_nodejs stepper_motor_generate_messages_nodejs)
+endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor)
   install(CODE "execute_process(COMMAND \"/usr/bin/python3\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor\")")
@@ -423,8 +435,22 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/step
   install(
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
     DESTINATION ${genpy_INSTALL_DIR}
+    # skip all init files
+    PATTERN "__init__.py" EXCLUDE
+    PATTERN "__init__.pyc" EXCLUDE
+  )
+  # install init files which are not in the root folder of the generated code
+  string(REGEX REPLACE "([][+.*()^])" "\\\\\\1" ESCAPED_PATH "${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor")
+  install(
+    DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
+    DESTINATION ${genpy_INSTALL_DIR}
+    FILES_MATCHING
+    REGEX "${ESCAPED_PATH}/.+/__init__.pyc?$"
   )
 endif()
 if(TARGET std_msgs_generate_messages_py)
   add_dependencies(stepper_motor_generate_messages_py std_msgs_generate_messages_py)
+endif()
+if(TARGET stepper_motor_generate_messages_py)
+  add_dependencies(stepper_motor_generate_messages_py stepper_motor_generate_messages_py)
 endif()

@@ -12,9 +12,9 @@
     :initarg :header
     :type std_msgs-msg:Header
     :initform (cl:make-instance 'std_msgs-msg:Header))
-   (set_speed
-    :reader set_speed
-    :initarg :set_speed
+   (speed
+    :reader speed
+    :initarg :speed
     :type cl:float
     :initform 0.0)
    (max_speed
@@ -67,10 +67,10 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader stepper_motor-msg:header-val is deprecated.  Use stepper_motor-msg:header instead.")
   (header m))
 
-(cl:ensure-generic-function 'set_speed-val :lambda-list '(m))
-(cl:defmethod set_speed-val ((m <StepperConfig>))
-  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader stepper_motor-msg:set_speed-val is deprecated.  Use stepper_motor-msg:set_speed instead.")
-  (set_speed m))
+(cl:ensure-generic-function 'speed-val :lambda-list '(m))
+(cl:defmethod speed-val ((m <StepperConfig>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader stepper_motor-msg:speed-val is deprecated.  Use stepper_motor-msg:speed instead.")
+  (speed m))
 
 (cl:ensure-generic-function 'max_speed-val :lambda-list '(m))
 (cl:defmethod max_speed-val ((m <StepperConfig>))
@@ -109,7 +109,7 @@
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <StepperConfig>) ostream)
   "Serializes a message object of type '<StepperConfig>"
   (roslisp-msg-protocol:serialize (cl:slot-value msg 'header) ostream)
-  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'set_speed))))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'speed))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
@@ -155,7 +155,7 @@
       (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
-    (cl:setf (cl:slot-value msg 'set_speed) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:setf (cl:slot-value msg 'speed) (roslisp-utils:decode-single-float-bits bits)))
     (cl:let ((bits 0))
       (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
@@ -202,16 +202,16 @@
   "stepper_motor/StepperConfig")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<StepperConfig>)))
   "Returns md5sum for a message object of type '<StepperConfig>"
-  "f33d563e99c62fa98073f3435668c039")
+  "ff43d43f44d3ccbde0bc997af21c6851")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'StepperConfig)))
   "Returns md5sum for a message object of type 'StepperConfig"
-  "f33d563e99c62fa98073f3435668c039")
+  "ff43d43f44d3ccbde0bc997af21c6851")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<StepperConfig>)))
   "Returns full string definition for message of type '<StepperConfig>"
-  (cl:format cl:nil "Header header~%float32 set_speed~%float32 max_speed~%float32 min_speed~%float32 accel~%float32 deccel~%uint8 step_pin~%uint8 dir_pin~%int64 steps_per_rev~%~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%~%"))
+  (cl:format cl:nil "Header header~%float32 speed~%float32 max_speed~%float32 min_speed~%float32 accel~%float32 deccel~%uint8 step_pin~%uint8 dir_pin~%int64 steps_per_rev~%~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'StepperConfig)))
   "Returns full string definition for message of type 'StepperConfig"
-  (cl:format cl:nil "Header header~%float32 set_speed~%float32 max_speed~%float32 min_speed~%float32 accel~%float32 deccel~%uint8 step_pin~%uint8 dir_pin~%int64 steps_per_rev~%~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%~%"))
+  (cl:format cl:nil "Header header~%float32 speed~%float32 max_speed~%float32 min_speed~%float32 accel~%float32 deccel~%uint8 step_pin~%uint8 dir_pin~%int64 steps_per_rev~%~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <StepperConfig>))
   (cl:+ 0
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'header))
@@ -228,7 +228,7 @@
   "Converts a ROS message object to a list"
   (cl:list 'StepperConfig
     (cl:cons ':header (header msg))
-    (cl:cons ':set_speed (set_speed msg))
+    (cl:cons ':speed (speed msg))
     (cl:cons ':max_speed (max_speed msg))
     (cl:cons ':min_speed (min_speed msg))
     (cl:cons ':accel (accel msg))

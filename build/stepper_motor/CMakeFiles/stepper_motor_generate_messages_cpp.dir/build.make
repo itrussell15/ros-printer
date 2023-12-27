@@ -65,7 +65,7 @@ stepper_motor/CMakeFiles/stepper_motor_generate_messages_cpp: /home/ubuntu/test/
 /home/ubuntu/test/devel/include/stepper_motor/AbsoluteMove.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/test/devel/include/stepper_motor/AbsoluteMove.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from stepper_motor/AbsoluteMove.msg"
-	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
+	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/ubuntu/test/devel/include/stepper_motor/CartesianMove.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/test/devel/include/stepper_motor/CartesianMove.h: /home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg
@@ -73,28 +73,28 @@ stepper_motor/CMakeFiles/stepper_motor_generate_messages_cpp: /home/ubuntu/test/
 /home/ubuntu/test/devel/include/stepper_motor/CartesianMove.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/test/devel/include/stepper_motor/CartesianMove.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from stepper_motor/CartesianMove.msg"
-	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
+	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/ubuntu/test/devel/include/stepper_motor/RelativeMove.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/test/devel/include/stepper_motor/RelativeMove.h: /home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg
 /home/ubuntu/test/devel/include/stepper_motor/RelativeMove.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/test/devel/include/stepper_motor/RelativeMove.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from stepper_motor/RelativeMove.msg"
-	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
+	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/ubuntu/test/devel/include/stepper_motor/LinearAbsoluteMove.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/test/devel/include/stepper_motor/LinearAbsoluteMove.h: /home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg
 /home/ubuntu/test/devel/include/stepper_motor/LinearAbsoluteMove.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/test/devel/include/stepper_motor/LinearAbsoluteMove.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from stepper_motor/LinearAbsoluteMove.msg"
-	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
+	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/ubuntu/test/devel/include/stepper_motor/StepperConfig.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/ubuntu/test/devel/include/stepper_motor/StepperConfig.h: /home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg
 /home/ubuntu/test/devel/include/stepper_motor/StepperConfig.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/test/devel/include/stepper_motor/StepperConfig.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from stepper_motor/StepperConfig.msg"
-	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
+	cd /home/ubuntu/test/src/stepper_motor && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/include/stepper_motor -e /opt/ros/noetic/share/gencpp/cmake/..
 
 stepper_motor_generate_messages_cpp: stepper_motor/CMakeFiles/stepper_motor_generate_messages_cpp
 stepper_motor_generate_messages_cpp: /home/ubuntu/test/devel/include/stepper_motor/AbsoluteMove.h
