@@ -1,0 +1,17 @@
+(cl:defpackage stepper_motor-msg
+  (:use )
+  (:export
+   "<ABSOLUTEMOVE>"
+   "ABSOLUTEMOVE"
+   "<CARTESIANMOVE>"
+   "CARTESIANMOVE"
+   "<LINEARABSOLUTEMOVE>"
+   "LINEARABSOLUTEMOVE"
+   "<RELATIVEMOVE>"
+   "RELATIVEMOVE"
+   "<STEPPERCONFIG>"
+   "STEPPERCONFIG"
+   "<POSITION_MSG>"
+   "POSITION_MSG"
+  ))
+

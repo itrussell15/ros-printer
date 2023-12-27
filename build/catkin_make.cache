@@ -1,0 +1,2 @@
+cartesian_controller:stepper_motor
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/test/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/test/install -G Unix Makefiles

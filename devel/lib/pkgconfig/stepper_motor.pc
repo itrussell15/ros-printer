@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/test/devel
+
+Name: stepper_motor
+Description: Description of stepper_motor
+Version: 0.0.0
+Cflags: -I/home/ubuntu/test/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime
