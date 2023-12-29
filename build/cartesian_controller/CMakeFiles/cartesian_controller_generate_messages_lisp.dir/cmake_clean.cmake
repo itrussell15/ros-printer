@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/test/devel/share/common-lisp/ros/cartesian_controller/msg/CartesianMove.lisp"
+  "/home/ubuntu/test/devel/share/common-lisp/ros/cartesian_controller/msg/G1.lisp"
   "CMakeFiles/cartesian_controller_generate_messages_lisp"
 )
 

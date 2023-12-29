@@ -1,9 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/test/devel/share/gennodejs/ros/stepper_motor/msg/AbsoluteMove.js"
-  "/home/ubuntu/test/devel/share/gennodejs/ros/stepper_motor/msg/CartesianMove.js"
-  "/home/ubuntu/test/devel/share/gennodejs/ros/stepper_motor/msg/LinearAbsoluteMove.js"
-  "/home/ubuntu/test/devel/share/gennodejs/ros/stepper_motor/msg/RelativeMove.js"
+  "/home/ubuntu/test/devel/share/gennodejs/ros/stepper_motor/msg/LinearStepperConfig.js"
+  "/home/ubuntu/test/devel/share/gennodejs/ros/stepper_motor/msg/LinearStepperMove.js"
   "/home/ubuntu/test/devel/share/gennodejs/ros/stepper_motor/msg/StepperConfig.js"
+  "/home/ubuntu/test/devel/share/gennodejs/ros/stepper_motor/msg/StepperMove.js"
   "CMakeFiles/stepper_motor_generate_messages_nodejs"
 )
 

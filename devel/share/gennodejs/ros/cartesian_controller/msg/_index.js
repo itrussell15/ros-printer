@@ -1,8 +1,10 @@
 
 "use strict";
 
-let CartesianMove = require('./CartesianMove.js');
+let G1 = require('./G1.js');
+let G1 = require('./G1.js');
 
 module.exports = {
-  CartesianMove: CartesianMove,
+  G1: G1,
+  G1: G1,
 };

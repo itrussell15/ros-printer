@@ -53,18 +53,18 @@ CMAKE_BINARY_DIR = /home/ubuntu/test/build
 # Include the progress variables for this target.
 include cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_nodejs.dir/progress.make
 
-cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_nodejs: /home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/CartesianMove.js
+cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_nodejs: /home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/G1.js
 
 
-/home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/CartesianMove.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/CartesianMove.js: /home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg
-/home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/CartesianMove.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/CartesianMove.js: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from cartesian_controller/CartesianMove.msg"
-	cd /home/ubuntu/test/build/cartesian_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p cartesian_controller -o /home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg
+/home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/G1.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/G1.js: /home/ubuntu/test/src/cartesian_controller/msg/G1.msg
+/home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/G1.js: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/G1.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from cartesian_controller/G1.msg"
+	cd /home/ubuntu/test/build/cartesian_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/test/src/cartesian_controller/msg/G1.msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -p cartesian_controller -o /home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg
 
 cartesian_controller_generate_messages_nodejs: cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_nodejs
-cartesian_controller_generate_messages_nodejs: /home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/CartesianMove.js
+cartesian_controller_generate_messages_nodejs: /home/ubuntu/test/devel/share/gennodejs/ros/cartesian_controller/msg/G1.js
 cartesian_controller_generate_messages_nodejs: cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_nodejs.dir/build.make
 
 .PHONY : cartesian_controller_generate_messages_nodejs

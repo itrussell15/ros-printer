@@ -10,6 +10,7 @@ project(cartesian_controller)
 find_package(catkin REQUIRED
     rospy
     std_msgs
+    geometry_msgs
     message_generation
     stepper_motor
 )
@@ -50,7 +51,7 @@ find_package(catkin REQUIRED
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  CartesianMove.msg
+  G1.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -71,7 +72,8 @@ add_message_files(
 generate_messages(
   DEPENDENCIES
   std_msgs  # Or other packages containing msgs
-  stepper_motor
+  geometry_msgs
+  cartesian_controller
 )
 
 ################################################
@@ -107,7 +109,7 @@ catkin_package(
 
 #  INCLUDE_DIRS include
 #  LIBRARIES cartesian_controller
- CATKIN_DEPENDS stepper_motor
+#  CATKIN_DEPENDS stepper_motor
 #  DEPENDS system_lib
 )
 

@@ -2,7 +2,7 @@
 
 message(STATUS "cartesian_controller: 1 messages, 0 services")
 
-set(MSG_I_FLAGS "-Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg")
+set(MSG_I_FLAGS "-Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,9 +17,9 @@ add_custom_target(cartesian_controller_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg" NAME_WE)
 add_custom_target(_cartesian_controller_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cartesian_controller" "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg" "std_msgs/Header:stepper_motor/AbsoluteMove"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "cartesian_controller" "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg" "geometry_msgs/Vector3:std_msgs/Header"
 )
 
 #
@@ -29,9 +29,9 @@ add_custom_target(_cartesian_controller_generate_messages_check_deps_${_filename
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(cartesian_controller
-  "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg"
+  "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/cartesian_controller
 )
 
@@ -49,7 +49,7 @@ add_custom_target(cartesian_controller_generate_messages_cpp
 add_dependencies(cartesian_controller_generate_messages cartesian_controller_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg" NAME_WE)
 add_dependencies(cartesian_controller_generate_messages_cpp _cartesian_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -62,9 +62,9 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS cartesian_controller_generate_messa
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(cartesian_controller
-  "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg"
+  "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cartesian_controller
 )
 
@@ -82,7 +82,7 @@ add_custom_target(cartesian_controller_generate_messages_eus
 add_dependencies(cartesian_controller_generate_messages cartesian_controller_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg" NAME_WE)
 add_dependencies(cartesian_controller_generate_messages_eus _cartesian_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -95,9 +95,9 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS cartesian_controller_generate_messa
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(cartesian_controller
-  "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg"
+  "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cartesian_controller
 )
 
@@ -115,7 +115,7 @@ add_custom_target(cartesian_controller_generate_messages_lisp
 add_dependencies(cartesian_controller_generate_messages cartesian_controller_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg" NAME_WE)
 add_dependencies(cartesian_controller_generate_messages_lisp _cartesian_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -128,9 +128,9 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS cartesian_controller_generate_messa
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(cartesian_controller
-  "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg"
+  "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cartesian_controller
 )
 
@@ -148,7 +148,7 @@ add_custom_target(cartesian_controller_generate_messages_nodejs
 add_dependencies(cartesian_controller_generate_messages cartesian_controller_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg" NAME_WE)
 add_dependencies(cartesian_controller_generate_messages_nodejs _cartesian_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -161,9 +161,9 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS cartesian_controller_generate_messa
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(cartesian_controller
-  "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg"
+  "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cartesian_controller
 )
 
@@ -181,7 +181,7 @@ add_custom_target(cartesian_controller_generate_messages_py
 add_dependencies(cartesian_controller_generate_messages cartesian_controller_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/test/src/cartesian_controller/msg/G1.msg" NAME_WE)
 add_dependencies(cartesian_controller_generate_messages_py _cartesian_controller_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -203,8 +203,11 @@ endif()
 if(TARGET std_msgs_generate_messages_cpp)
   add_dependencies(cartesian_controller_generate_messages_cpp std_msgs_generate_messages_cpp)
 endif()
-if(TARGET stepper_motor_generate_messages_cpp)
-  add_dependencies(cartesian_controller_generate_messages_cpp stepper_motor_generate_messages_cpp)
+if(TARGET geometry_msgs_generate_messages_cpp)
+  add_dependencies(cartesian_controller_generate_messages_cpp geometry_msgs_generate_messages_cpp)
+endif()
+if(TARGET cartesian_controller_generate_messages_cpp)
+  add_dependencies(cartesian_controller_generate_messages_cpp cartesian_controller_generate_messages_cpp)
 endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/cartesian_controller)
@@ -217,8 +220,11 @@ endif()
 if(TARGET std_msgs_generate_messages_eus)
   add_dependencies(cartesian_controller_generate_messages_eus std_msgs_generate_messages_eus)
 endif()
-if(TARGET stepper_motor_generate_messages_eus)
-  add_dependencies(cartesian_controller_generate_messages_eus stepper_motor_generate_messages_eus)
+if(TARGET geometry_msgs_generate_messages_eus)
+  add_dependencies(cartesian_controller_generate_messages_eus geometry_msgs_generate_messages_eus)
+endif()
+if(TARGET cartesian_controller_generate_messages_eus)
+  add_dependencies(cartesian_controller_generate_messages_eus cartesian_controller_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/cartesian_controller)
@@ -231,8 +237,11 @@ endif()
 if(TARGET std_msgs_generate_messages_lisp)
   add_dependencies(cartesian_controller_generate_messages_lisp std_msgs_generate_messages_lisp)
 endif()
-if(TARGET stepper_motor_generate_messages_lisp)
-  add_dependencies(cartesian_controller_generate_messages_lisp stepper_motor_generate_messages_lisp)
+if(TARGET geometry_msgs_generate_messages_lisp)
+  add_dependencies(cartesian_controller_generate_messages_lisp geometry_msgs_generate_messages_lisp)
+endif()
+if(TARGET cartesian_controller_generate_messages_lisp)
+  add_dependencies(cartesian_controller_generate_messages_lisp cartesian_controller_generate_messages_lisp)
 endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/cartesian_controller)
@@ -245,8 +254,11 @@ endif()
 if(TARGET std_msgs_generate_messages_nodejs)
   add_dependencies(cartesian_controller_generate_messages_nodejs std_msgs_generate_messages_nodejs)
 endif()
-if(TARGET stepper_motor_generate_messages_nodejs)
-  add_dependencies(cartesian_controller_generate_messages_nodejs stepper_motor_generate_messages_nodejs)
+if(TARGET geometry_msgs_generate_messages_nodejs)
+  add_dependencies(cartesian_controller_generate_messages_nodejs geometry_msgs_generate_messages_nodejs)
+endif()
+if(TARGET cartesian_controller_generate_messages_nodejs)
+  add_dependencies(cartesian_controller_generate_messages_nodejs cartesian_controller_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/cartesian_controller)
@@ -260,6 +272,9 @@ endif()
 if(TARGET std_msgs_generate_messages_py)
   add_dependencies(cartesian_controller_generate_messages_py std_msgs_generate_messages_py)
 endif()
-if(TARGET stepper_motor_generate_messages_py)
-  add_dependencies(cartesian_controller_generate_messages_py stepper_motor_generate_messages_py)
+if(TARGET geometry_msgs_generate_messages_py)
+  add_dependencies(cartesian_controller_generate_messages_py geometry_msgs_generate_messages_py)
+endif()
+if(TARGET cartesian_controller_generate_messages_py)
+  add_dependencies(cartesian_controller_generate_messages_py cartesian_controller_generate_messages_py)
 endif()

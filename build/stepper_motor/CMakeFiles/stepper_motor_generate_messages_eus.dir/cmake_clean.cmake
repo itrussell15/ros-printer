@@ -1,10 +1,9 @@
 file(REMOVE_RECURSE
   "/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/manifest.l"
-  "/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/AbsoluteMove.l"
-  "/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/CartesianMove.l"
-  "/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearAbsoluteMove.l"
-  "/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/RelativeMove.l"
+  "/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperConfig.l"
+  "/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperMove.l"
   "/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperConfig.l"
+  "/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperMove.l"
   "CMakeFiles/stepper_motor_generate_messages_eus"
 )
 

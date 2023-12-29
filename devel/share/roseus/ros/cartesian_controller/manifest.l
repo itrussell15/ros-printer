@@ -5,6 +5,7 @@
 ;;  FROM /home/ubuntu/test/src/cartesian_controller/package.xml (0.0.0)
 ;; USING /opt/ros/noetic/lib/python3/dist-packages/geneus/geneus_main.py /opt/ros/noetic/share/geneus/package.xml (3.0.0)
 ;;
+(ros::load-ros-package "cartesian_controller")
 (ros::load-ros-package "geometry_msgs")
 (ros::load-ros-package "roscpp")
 (ros::load-ros-package "rosgraph_msgs")

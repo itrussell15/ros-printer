@@ -53,19 +53,19 @@ CMAKE_BINARY_DIR = /home/ubuntu/test/build
 # Include the progress variables for this target.
 include cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_cpp.dir/progress.make
 
-cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_cpp: /home/ubuntu/test/devel/include/cartesian_controller/CartesianMove.h
+cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_cpp: /home/ubuntu/test/devel/include/cartesian_controller/G1.h
 
 
-/home/ubuntu/test/devel/include/cartesian_controller/CartesianMove.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
-/home/ubuntu/test/devel/include/cartesian_controller/CartesianMove.h: /home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg
-/home/ubuntu/test/devel/include/cartesian_controller/CartesianMove.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/test/devel/include/cartesian_controller/CartesianMove.h: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-/home/ubuntu/test/devel/include/cartesian_controller/CartesianMove.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from cartesian_controller/CartesianMove.msg"
-	cd /home/ubuntu/test/src/cartesian_controller && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p cartesian_controller -o /home/ubuntu/test/devel/include/cartesian_controller -e /opt/ros/noetic/share/gencpp/cmake/..
+/home/ubuntu/test/devel/include/cartesian_controller/G1.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ubuntu/test/devel/include/cartesian_controller/G1.h: /home/ubuntu/test/src/cartesian_controller/msg/G1.msg
+/home/ubuntu/test/devel/include/cartesian_controller/G1.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/test/devel/include/cartesian_controller/G1.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/test/devel/include/cartesian_controller/G1.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from cartesian_controller/G1.msg"
+	cd /home/ubuntu/test/src/cartesian_controller && /home/ubuntu/test/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ubuntu/test/src/cartesian_controller/msg/G1.msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -p cartesian_controller -o /home/ubuntu/test/devel/include/cartesian_controller -e /opt/ros/noetic/share/gencpp/cmake/..
 
 cartesian_controller_generate_messages_cpp: cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_cpp
-cartesian_controller_generate_messages_cpp: /home/ubuntu/test/devel/include/cartesian_controller/CartesianMove.h
+cartesian_controller_generate_messages_cpp: /home/ubuntu/test/devel/include/cartesian_controller/G1.h
 cartesian_controller_generate_messages_cpp: cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_cpp.dir/build.make
 
 .PHONY : cartesian_controller_generate_messages_cpp

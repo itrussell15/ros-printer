@@ -1,9 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/test/devel/include/stepper_motor/AbsoluteMove.h"
-  "/home/ubuntu/test/devel/include/stepper_motor/CartesianMove.h"
-  "/home/ubuntu/test/devel/include/stepper_motor/LinearAbsoluteMove.h"
-  "/home/ubuntu/test/devel/include/stepper_motor/RelativeMove.h"
+  "/home/ubuntu/test/devel/include/stepper_motor/LinearStepperConfig.h"
+  "/home/ubuntu/test/devel/include/stepper_motor/LinearStepperMove.h"
   "/home/ubuntu/test/devel/include/stepper_motor/StepperConfig.h"
+  "/home/ubuntu/test/devel/include/stepper_motor/StepperMove.h"
   "CMakeFiles/stepper_motor_generate_messages_cpp"
 )
 

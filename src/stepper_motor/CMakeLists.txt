@@ -49,11 +49,10 @@ catkin_python_setup()
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  AbsoluteMove.msg
-  CartesianMove.msg
-  RelativeMove.msg
-  LinearAbsoluteMove.msg
   StepperConfig.msg
+  StepperMove.msg
+  LinearStepperConfig.msg
+  LinearStepperMove.msg
 )
 
 ## Generate services in the 'srv' folder

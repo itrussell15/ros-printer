@@ -53,55 +53,46 @@ CMAKE_BINARY_DIR = /home/ubuntu/test/build
 # Include the progress variables for this target.
 include stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus.dir/progress.make
 
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/AbsoluteMove.l
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/CartesianMove.l
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/RelativeMove.l
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearAbsoluteMove.l
 stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperConfig.l
+stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperMove.l
+stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperConfig.l
+stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperMove.l
 stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/manifest.l
 
-
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/AbsoluteMove.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/AbsoluteMove.l: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/AbsoluteMove.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from stepper_motor/AbsoluteMove.msg"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg
-
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/CartesianMove.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/CartesianMove.l: /home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/CartesianMove.l: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/CartesianMove.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from stepper_motor/CartesianMove.msg"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg
-
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/RelativeMove.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/RelativeMove.l: /home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/RelativeMove.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from stepper_motor/RelativeMove.msg"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg
-
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearAbsoluteMove.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearAbsoluteMove.l: /home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg
-/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearAbsoluteMove.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from stepper_motor/LinearAbsoluteMove.msg"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg
 
 /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperConfig.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperConfig.l: /home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg
 /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperConfig.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp code from stepper_motor/StepperConfig.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from stepper_motor/StepperConfig.msg"
 	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg
 
+/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperMove.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperMove.l: /home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg
+/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperMove.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from stepper_motor/StepperMove.msg"
+	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg
+
+/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperConfig.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperConfig.l: /home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg
+/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperConfig.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from stepper_motor/LinearStepperConfig.msg"
+	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg
+
+/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperMove.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperMove.l: /home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg
+/home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperMove.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from stepper_motor/LinearStepperMove.msg"
+	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg
+
 /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating EusLisp manifest code for stepper_motor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for stepper_motor"
 	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ubuntu/test/devel/share/roseus/ros/stepper_motor stepper_motor std_msgs stepper_motor
 
 stepper_motor_generate_messages_eus: stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus
-stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/AbsoluteMove.l
-stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/CartesianMove.l
-stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/RelativeMove.l
-stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearAbsoluteMove.l
 stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperConfig.l
+stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/StepperMove.l
+stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperConfig.l
+stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/msg/LinearStepperMove.l
 stepper_motor_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/stepper_motor/manifest.l
 stepper_motor_generate_messages_eus: stepper_motor/CMakeFiles/stepper_motor_generate_messages_eus.dir/build.make
 

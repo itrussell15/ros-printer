@@ -1,7 +1,9 @@
 (cl:defpackage cartesian_controller-msg
   (:use )
   (:export
-   "<CARTESIANMOVE>"
-   "CARTESIANMOVE"
+   "<G1>"
+   "G1"
+   "<G1>"
+   "G1"
   ))
 

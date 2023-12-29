@@ -53,23 +53,23 @@ CMAKE_BINARY_DIR = /home/ubuntu/test/build
 # Include the progress variables for this target.
 include cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_eus.dir/progress.make
 
-cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/CartesianMove.l
+cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/G1.l
 cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/manifest.l
 
 
-/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/CartesianMove.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/CartesianMove.l: /home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg
-/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/CartesianMove.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/CartesianMove.l: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from cartesian_controller/CartesianMove.msg"
-	cd /home/ubuntu/test/build/cartesian_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p cartesian_controller -o /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg
+/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/G1.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/G1.l: /home/ubuntu/test/src/cartesian_controller/msg/G1.msg
+/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/G1.l: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/G1.l: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from cartesian_controller/G1.msg"
+	cd /home/ubuntu/test/build/cartesian_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ubuntu/test/src/cartesian_controller/msg/G1.msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -p cartesian_controller -o /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg
 
 /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for cartesian_controller"
-	cd /home/ubuntu/test/build/cartesian_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller cartesian_controller std_msgs stepper_motor
+	cd /home/ubuntu/test/build/cartesian_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller cartesian_controller std_msgs geometry_msgs cartesian_controller
 
 cartesian_controller_generate_messages_eus: cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_eus
-cartesian_controller_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/CartesianMove.l
+cartesian_controller_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/G1.l
 cartesian_controller_generate_messages_eus: /home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/manifest.l
 cartesian_controller_generate_messages_eus: cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_eus.dir/build.make
 

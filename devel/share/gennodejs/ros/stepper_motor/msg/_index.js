@@ -2,41 +2,21 @@
 "use strict";
 
 let StepperConfig = require('./StepperConfig.js');
-let position_msg = require('./position_msg.js');
-let ScrewDriveStepperConfig = require('./ScrewDriveStepperConfig.js');
-let RelativeAbsoluteMove = require('./RelativeAbsoluteMove.js');
-let RelativeMove = require('./RelativeMove.js');
-let CartesianMove = require('./CartesianMove.js');
-let LeadScrewStepperConfig = require('./LeadScrewStepperConfig.js');
-let AbsoluteMove = require('./AbsoluteMove.js');
-let LinearAbsoluteMove = require('./LinearAbsoluteMove.js');
+let LinearStepperConfig = require('./LinearStepperConfig.js');
+let StepperMove = require('./StepperMove.js');
+let LinearStepperMove = require('./LinearStepperMove.js');
 let StepperConfig = require('./StepperConfig.js');
-let position_msg = require('./position_msg.js');
-let ScrewDriveStepperConfig = require('./ScrewDriveStepperConfig.js');
-let RelativeAbsoluteMove = require('./RelativeAbsoluteMove.js');
-let RelativeMove = require('./RelativeMove.js');
-let CartesianMove = require('./CartesianMove.js');
-let LeadScrewStepperConfig = require('./LeadScrewStepperConfig.js');
-let AbsoluteMove = require('./AbsoluteMove.js');
-let LinearAbsoluteMove = require('./LinearAbsoluteMove.js');
+let LinearStepperConfig = require('./LinearStepperConfig.js');
+let StepperMove = require('./StepperMove.js');
+let LinearStepperMove = require('./LinearStepperMove.js');
 
 module.exports = {
   StepperConfig: StepperConfig,
-  position_msg: position_msg,
-  ScrewDriveStepperConfig: ScrewDriveStepperConfig,
-  RelativeAbsoluteMove: RelativeAbsoluteMove,
-  RelativeMove: RelativeMove,
-  CartesianMove: CartesianMove,
-  LeadScrewStepperConfig: LeadScrewStepperConfig,
-  AbsoluteMove: AbsoluteMove,
-  LinearAbsoluteMove: LinearAbsoluteMove,
+  LinearStepperConfig: LinearStepperConfig,
+  StepperMove: StepperMove,
+  LinearStepperMove: LinearStepperMove,
   StepperConfig: StepperConfig,
-  position_msg: position_msg,
-  ScrewDriveStepperConfig: ScrewDriveStepperConfig,
-  RelativeAbsoluteMove: RelativeAbsoluteMove,
-  RelativeMove: RelativeMove,
-  CartesianMove: CartesianMove,
-  LeadScrewStepperConfig: LeadScrewStepperConfig,
-  AbsoluteMove: AbsoluteMove,
-  LinearAbsoluteMove: LinearAbsoluteMove,
+  LinearStepperConfig: LinearStepperConfig,
+  StepperMove: StepperMove,
+  LinearStepperMove: LinearStepperMove,
 };

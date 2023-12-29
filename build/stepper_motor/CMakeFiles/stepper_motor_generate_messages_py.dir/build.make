@@ -53,60 +53,50 @@ CMAKE_BINARY_DIR = /home/ubuntu/test/build
 # Include the progress variables for this target.
 include stepper_motor/CMakeFiles/stepper_motor_generate_messages_py.dir/progress.make
 
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_AbsoluteMove.py
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_CartesianMove.py
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_RelativeMove.py
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearAbsoluteMove.py
 stepper_motor/CMakeFiles/stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperConfig.py
+stepper_motor/CMakeFiles/stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperMove.py
+stepper_motor/CMakeFiles/stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperConfig.py
+stepper_motor/CMakeFiles/stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperMove.py
 stepper_motor/CMakeFiles/stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py
 
-
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_AbsoluteMove.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_AbsoluteMove.py: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_AbsoluteMove.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG stepper_motor/AbsoluteMove"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg
-
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_CartesianMove.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_CartesianMove.py: /home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_CartesianMove.py: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_CartesianMove.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG stepper_motor/CartesianMove"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg
-
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_RelativeMove.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_RelativeMove.py: /home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_RelativeMove.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG stepper_motor/RelativeMove"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg
-
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearAbsoluteMove.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearAbsoluteMove.py: /home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearAbsoluteMove.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG stepper_motor/LinearAbsoluteMove"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg
 
 /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperConfig.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperConfig.py: /home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg
 /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperConfig.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python from MSG stepper_motor/StepperConfig"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG stepper_motor/StepperConfig"
 	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg
 
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperMove.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperMove.py: /home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperMove.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG stepper_motor/StepperMove"
+	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg
+
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperConfig.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperConfig.py: /home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperConfig.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG stepper_motor/LinearStepperConfig"
+	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg
+
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperMove.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperMove.py: /home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperMove.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG stepper_motor/LinearStepperMove"
+	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg
+
 /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_AbsoluteMove.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_CartesianMove.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_RelativeMove.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearAbsoluteMove.py
 /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperConfig.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python msg __init__.py for stepper_motor"
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperMove.py
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperConfig.py
+/home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperMove.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for stepper_motor"
 	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg --initpy
 
 stepper_motor_generate_messages_py: stepper_motor/CMakeFiles/stepper_motor_generate_messages_py
-stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_AbsoluteMove.py
-stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_CartesianMove.py
-stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_RelativeMove.py
-stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearAbsoluteMove.py
 stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperConfig.py
+stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_StepperMove.py
+stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperConfig.py
+stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/_LinearStepperMove.py
 stepper_motor_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/stepper_motor/msg/__init__.py
 stepper_motor_generate_messages_py: stepper_motor/CMakeFiles/stepper_motor_generate_messages_py.dir/build.make
 

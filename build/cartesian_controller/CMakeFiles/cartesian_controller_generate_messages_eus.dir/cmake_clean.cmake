@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/manifest.l"
-  "/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/CartesianMove.l"
+  "/home/ubuntu/test/devel/share/roseus/ros/cartesian_controller/msg/G1.l"
   "CMakeFiles/cartesian_controller_generate_messages_eus"
 )
 

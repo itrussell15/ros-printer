@@ -53,50 +53,41 @@ CMAKE_BINARY_DIR = /home/ubuntu/test/build
 # Include the progress variables for this target.
 include stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp.dir/progress.make
 
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/AbsoluteMove.lisp
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/CartesianMove.lisp
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/RelativeMove.lisp
-stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearAbsoluteMove.lisp
 stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperConfig.lisp
+stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperMove.lisp
+stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperConfig.lisp
+stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperMove.lisp
 
-
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/AbsoluteMove.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/AbsoluteMove.lisp: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/AbsoluteMove.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from stepper_motor/AbsoluteMove.msg"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg
-
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/CartesianMove.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/CartesianMove.lisp: /home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/CartesianMove.lisp: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/CartesianMove.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from stepper_motor/CartesianMove.msg"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg
-
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/RelativeMove.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/RelativeMove.lisp: /home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/RelativeMove.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from stepper_motor/RelativeMove.msg"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg
-
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearAbsoluteMove.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearAbsoluteMove.lisp: /home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg
-/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearAbsoluteMove.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from stepper_motor/LinearAbsoluteMove.msg"
-	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg
 
 /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperConfig.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperConfig.lisp: /home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg
 /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperConfig.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from stepper_motor/StepperConfig.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from stepper_motor/StepperConfig.msg"
 	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg
 
+/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperMove.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperMove.lisp: /home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg
+/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperMove.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from stepper_motor/StepperMove.msg"
+	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg
+
+/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperConfig.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperConfig.lisp: /home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg
+/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperConfig.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from stepper_motor/LinearStepperConfig.msg"
+	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg
+
+/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperMove.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperMove.lisp: /home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg
+/home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperMove.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from stepper_motor/LinearStepperMove.msg"
+	cd /home/ubuntu/test/build/stepper_motor && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p stepper_motor -o /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg
+
 stepper_motor_generate_messages_lisp: stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp
-stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/AbsoluteMove.lisp
-stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/CartesianMove.lisp
-stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/RelativeMove.lisp
-stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearAbsoluteMove.lisp
 stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperConfig.lisp
+stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/StepperMove.lisp
+stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperConfig.lisp
+stepper_motor_generate_messages_lisp: /home/ubuntu/test/devel/share/common-lisp/ros/stepper_motor/msg/LinearStepperMove.lisp
 stepper_motor_generate_messages_lisp: stepper_motor/CMakeFiles/stepper_motor_generate_messages_lisp.dir/build.make
 
 .PHONY : stepper_motor_generate_messages_lisp

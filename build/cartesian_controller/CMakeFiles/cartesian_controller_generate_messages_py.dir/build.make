@@ -53,24 +53,24 @@ CMAKE_BINARY_DIR = /home/ubuntu/test/build
 # Include the progress variables for this target.
 include cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_py.dir/progress.make
 
-cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_CartesianMove.py
+cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_G1.py
 cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/__init__.py
 
 
-/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_CartesianMove.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_CartesianMove.py: /home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg
-/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_CartesianMove.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_CartesianMove.py: /home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG cartesian_controller/CartesianMove"
-	cd /home/ubuntu/test/build/cartesian_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/cartesian_controller/msg/CartesianMove.msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg -p cartesian_controller -o /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg
+/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_G1.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_G1.py: /home/ubuntu/test/src/cartesian_controller/msg/G1.msg
+/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_G1.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_G1.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG cartesian_controller/G1"
+	cd /home/ubuntu/test/build/cartesian_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/test/src/cartesian_controller/msg/G1.msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Icartesian_controller:/home/ubuntu/test/src/cartesian_controller/msg -p cartesian_controller -o /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg
 
 /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_CartesianMove.py
+/home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/__init__.py: /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_G1.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for cartesian_controller"
 	cd /home/ubuntu/test/build/cartesian_controller && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg --initpy
 
 cartesian_controller_generate_messages_py: cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_py
-cartesian_controller_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_CartesianMove.py
+cartesian_controller_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/_G1.py
 cartesian_controller_generate_messages_py: /home/ubuntu/test/devel/lib/python3/dist-packages/cartesian_controller/msg/__init__.py
 cartesian_controller_generate_messages_py: cartesian_controller/CMakeFiles/cartesian_controller_generate_messages_py.dir/build.make
 

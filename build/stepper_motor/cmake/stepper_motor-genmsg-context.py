@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg;/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg;/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg;/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg;/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg"
+messages_str = "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg;/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg;/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg;/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg"
 services_str = ""
 pkg_name = "stepper_motor"
 dependencies_str = "std_msgs;stepper_motor"

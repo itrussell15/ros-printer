@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "stepper_motor: 5 messages, 0 services")
+message(STATUS "stepper_motor: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Istepper_motor:/home/ubuntu/test/src/stepper_motor/msg")
 
@@ -17,29 +17,24 @@ add_custom_target(stepper_motor_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg" NAME_WE)
-add_custom_target(_stepper_motor_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "stepper_motor" "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg" "std_msgs/Header"
-)
-
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg" NAME_WE)
-add_custom_target(_stepper_motor_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "stepper_motor" "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg" "stepper_motor/AbsoluteMove:std_msgs/Header"
-)
-
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg" NAME_WE)
-add_custom_target(_stepper_motor_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "stepper_motor" "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg" "std_msgs/Header"
-)
-
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg" NAME_WE)
-add_custom_target(_stepper_motor_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "stepper_motor" "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg" "std_msgs/Header"
-)
-
 get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg" NAME_WE)
 add_custom_target(_stepper_motor_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "stepper_motor" "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg" "std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg" NAME_WE)
+add_custom_target(_stepper_motor_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "stepper_motor" "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg" "std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg" NAME_WE)
+add_custom_target(_stepper_motor_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "stepper_motor" "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg" "std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg" NAME_WE)
+add_custom_target(_stepper_motor_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "stepper_motor" "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg" "std_msgs/Header"
 )
 
 #
@@ -49,31 +44,25 @@ add_custom_target(_stepper_motor_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_cpp(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg"
-  "${MSG_I_FLAGS}"
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_cpp(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_cpp(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_cpp(stepper_motor
   "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_cpp(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_cpp(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_cpp(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/stepper_motor
@@ -93,15 +82,13 @@ add_custom_target(stepper_motor_generate_messages_cpp
 add_dependencies(stepper_motor_generate_messages stepper_motor_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_cpp _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_cpp _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_cpp _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_cpp _stepper_motor_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_cpp _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_cpp _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_cpp _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg" NAME_WE)
 add_dependencies(stepper_motor_generate_messages_cpp _stepper_motor_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -114,31 +101,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS stepper_motor_generate_messages_cpp
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_eus(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg"
-  "${MSG_I_FLAGS}"
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_eus(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_eus(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_eus(stepper_motor
   "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_eus(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_eus(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_eus(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/stepper_motor
@@ -158,15 +139,13 @@ add_custom_target(stepper_motor_generate_messages_eus
 add_dependencies(stepper_motor_generate_messages stepper_motor_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_eus _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_eus _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_eus _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_eus _stepper_motor_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_eus _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_eus _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_eus _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg" NAME_WE)
 add_dependencies(stepper_motor_generate_messages_eus _stepper_motor_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -179,31 +158,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS stepper_motor_generate_messages_eus
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_lisp(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg"
-  "${MSG_I_FLAGS}"
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_lisp(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_lisp(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_lisp(stepper_motor
   "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_lisp(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_lisp(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_lisp(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/stepper_motor
@@ -223,15 +196,13 @@ add_custom_target(stepper_motor_generate_messages_lisp
 add_dependencies(stepper_motor_generate_messages stepper_motor_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_lisp _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_lisp _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_lisp _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_lisp _stepper_motor_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_lisp _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_lisp _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_lisp _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg" NAME_WE)
 add_dependencies(stepper_motor_generate_messages_lisp _stepper_motor_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -244,31 +215,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS stepper_motor_generate_messages_lis
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_nodejs(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg"
-  "${MSG_I_FLAGS}"
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_nodejs(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_nodejs(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_nodejs(stepper_motor
   "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_nodejs(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_nodejs(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_nodejs(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/stepper_motor
@@ -288,15 +253,13 @@ add_custom_target(stepper_motor_generate_messages_nodejs
 add_dependencies(stepper_motor_generate_messages stepper_motor_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_nodejs _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_nodejs _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_nodejs _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_nodejs _stepper_motor_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_nodejs _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_nodejs _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_nodejs _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg" NAME_WE)
 add_dependencies(stepper_motor_generate_messages_nodejs _stepper_motor_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -309,31 +272,25 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS stepper_motor_generate_messages_nod
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_py(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg"
-  "${MSG_I_FLAGS}"
-  "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_py(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_py(stepper_motor
-  "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
-)
-_generate_msg_py(stepper_motor
   "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_py(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_py(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
+)
+_generate_msg_py(stepper_motor
+  "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/stepper_motor
@@ -353,15 +310,13 @@ add_custom_target(stepper_motor_generate_messages_py
 add_dependencies(stepper_motor_generate_messages stepper_motor_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/AbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_py _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/CartesianMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_py _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/RelativeMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_py _stepper_motor_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearAbsoluteMove.msg" NAME_WE)
-add_dependencies(stepper_motor_generate_messages_py _stepper_motor_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_py _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/StepperMove.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_py _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperConfig.msg" NAME_WE)
+add_dependencies(stepper_motor_generate_messages_py _stepper_motor_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/ubuntu/test/src/stepper_motor/msg/LinearStepperMove.msg" NAME_WE)
 add_dependencies(stepper_motor_generate_messages_py _stepper_motor_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

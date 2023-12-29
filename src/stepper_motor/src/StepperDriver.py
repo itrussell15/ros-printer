@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import dataclasses
 
 import rospy
 import RPi.GPIO as GPIO
@@ -14,8 +15,41 @@ class Direction(enum.Enum):
     CLOCKWISE = 1
 
 class UnitSystem(enum.Enum):
-    METRIC = 0
-    IMPERIAL = 1
+    MM = 0
+    IN = 1
+
+class MoveType(enum.Enum):
+
+    AbsoluteMove = 0
+    RelativeMove = 1
+
+class StepperType(enum.Enum):
+
+    Stepper=1
+    LinearStepper=2
+
+def convert(amount, from_unit, to_unit):
+    def in_to_mm(amount):
+        return amount * 25.4
+
+    def mm_to_in(amount):
+        return amount / 25.4
+
+    def same_to_same(amount):
+        return amount
+
+    convert_map = {
+        UnitSystem.IMPERIAL: {
+            UnitSystem.METRIC: in_to_mm,
+            UnitSystem.IMPERIAL: same_to_same
+        },
+        UnitSystem.METRIC: {
+            UnitSystem.IMPERIAL: mm_to_in,
+            UnitSystem.METRIC: same_to_same
+        }
+    }
+
+    return convert_map[from_unit][to_unit](amount)
 
 class Stepper:
 
@@ -58,7 +92,7 @@ class Stepper:
     def __repr__(self):
         return f"StepperMotor(pos:{self.steps}, STEP_PIN:{self.STEP_PIN}, DIR_PIN:{self.DIR_PIN})"
 
-    def move_turns(self, turns):
+    def _move_turns(self, turns):
         steps = int(turns * self.STEPS_PER_REV)
         return self.move_rel(steps)
 
@@ -93,7 +127,6 @@ class Stepper:
             amount = abs(amount)
 
         GPIO.output(self.DIR_PIN, direction.value)
-
         delay_profile = self.move_profile(amount)
 
         n = 0
@@ -154,26 +187,23 @@ class Stepper:
     def speed(self):
         return self._speed
 
-class ScrewDriveStepper(Stepper):
-    """
-    For steppers with screw drives!
-    """
-    # TODO Create config for this
+class LinearStepper(Stepper):
+
     def __init__(
             self,
             dir_pin,
             step_pin,
-            lead = None,
-            length = None, # Inches
+            distance_per_turn,
+            length=None, # Units
             speed=100,
             accel=15,
             deccel=None,
-            units = UnitSystem.IMPERIAL,
-            steps_per_rev = 200,
-            max_speed = 120,
-            min_speed = 1,
+            units=UnitSystem.IN,
+            steps_per_rev=200,
+            max_speed=120,
+            min_speed=1,
             **kwargs
-        ):
+    ):
 
         super().__init__(
             dir_pin,
@@ -186,128 +216,89 @@ class ScrewDriveStepper(Stepper):
             steps_per_rev
         )
 
-        self.screw = self.LeadScrew(
-            lead = lead,
-            length = length,
-            units = units
-        )
+        self.length = length
+        self._distance_per_turn = distance_per_turn
+
+        if type(units) != UnitSystem:
+            self.units = UnitSystem[units]
+        else:
+            self.units = units
 
     def __repr__(self):
-        return f"LeadScrewStepper(Lead:{self.screw.lead}, pos:{self.position}, STEP_PIN:{self.STEP_PIN}, DIR_PIN:{self.DIR_PIN})"
+        return f"{self.units.name}LinearStepper(DistPerTurn: {self._distance_per_turn}, pos:{self.steps}, STEP_PIN:{self.STEP_PIN}, DIR_PIN:{self.DIR_PIN})"
 
-    def move_distance(self, distance, distance_units = None):
-        # Use the same units as the screw
-        if distance_units is None:
-            units = self.screw.units
-
-        # Handle mismatched units
-        if units != self.screw.units:
-            distance = self.screw.convert(distance, distance_units, self.screw.units)
-
-        turns = self._turns_from_distance(distance)
-        return self.move_turns(turns)
-
-    def move_abs(self, new_position):
+    def move_abs(self, new_position, units = None):
+        rospy.loginfo(f'Units -- {self.units} -- New Position: {new_position} -- Current Position: {self.position}')
         if new_position == self.position:
-            rospy.logwarn(f"Position is already {self.position}, no move needed")
+            rospy.loginfo(f"Position is already {self.position}, no move needed")
             return True
 
         delta = new_position - self.position
-        return self.move_distance(delta)
+        return self._move_distance(delta)
+
+    def move_rel(self, distance, units = None):
+        return self._move_distance(distance, units)
+
+    def _move_distance(self, distance, distance_units = None):
+        # Use the same units as provided
+        if distance_units is None:
+            units = self.units
+
+        # Handle mismatched units
+        if units != self.units:
+            distance = convert(distance, distance_units, self.units)
+
+        turns = distance / self._distance_per_turn
+        return self._move_turns(turns)
+
+    def _move_turns(self, turns):
+        steps = int(turns * self.STEPS_PER_REV)
+        return super().move_rel(steps)
 
     def rel_move_time(self, distance):
-        steps = self._turns_from_distance(distance) * self.STEPS_PER_REV
+        steps = (distance / self._distance_per_turn) * self.STEPS_PER_REV
         return super().rel_move_time(steps)
 
     def abs_move_time(self, new_position):
         delta = new_position - self.position
         return self.rel_move_time(delta)
 
-    def _turns_from_distance(self, distance):
-        return distance / self.screw.lead
+    def linear_to_RPM(self, lin_speed):
+        rev_per_second = lin_speed / self._distance_per_turn
+        return rev_per_second * 60
+
+    def set_speed(self, new_speed):
+        """
+        MUST PASS IN AT units / s
+        :param new_speed: units / s
+        :return:
+        """
+        new_speed_rpm = self.linear_to_RPM(new_speed)
+        super().set_speed(new_speed_rpm)
 
     @property
     def position(self):
-        return (self.steps / self.STEPS_PER_REV) * self.screw.lead
+        return self._distance_per_turn * (self.steps / self.STEPS_PER_REV)
 
     @property
     def linear_speed(self):
         "Linear speed of screw drive in *units* per second"
-
         rev_per_second = self.speed / 60
-        return rev_per_second * self.screw.lead
-
-    class LeadScrew:
-
-        def __init__(
-                self,
-                length = None,
-                units = UnitSystem.IMPERIAL,
-                lead = None
-        ):
-
-            self.units = units
-            self.length = length
-
-            if lead is not None:
-                self._lead = lead
-            else:
-                raise ValueError(f"No value for lead screw lead was passed in")
-
-        def __repr__(self):
-            unit = "in" if self.units == UnitSystem.IMPERIAL else "mm"
-            return f"LeadScrew(Lead: {self.lead} {unit}/turn, Length: {self.length} {unit})"
-
-        def _compute_lead(self, pitch, starts):
-            return pitch * starts
-
-        def convert(self, amount, from_unit, to_unit):
-
-            def in_to_mm(amount):
-                return amount * 25.4
-
-            def mm_to_in(amount):
-                return amount / 25.4
-
-            def same_to_same(amount):
-                return amount
-
-            convert_map = {
-                UnitSystem.IMPERIAL: {
-                    UnitSystem.METRIC: in_to_mm,
-                    UnitSystem.IMPERIAL: same_to_same
-                },
-                UnitSystem.METRIC: {
-                    UnitSystem.IMPERIAL: mm_to_in,
-                    UnitSystem.METRIC: same_to_same
-                }
-            }
-
-            return convert_map[from_unit][to_unit](amount)
-
-        @property
-        def lead(self):
-            """
-            Distance traveled in a single turn
-            :return: Lead of screw
-            """
-            return self._lead
-
-class StepperType(enum.Enum):
-
-    Stepper=1
-    ScrewDriveStepper=2
+        return rev_per_second * self._distance_per_turn
 
 class ROS_Stepper(Stepper):
+    """
+    Manages interface with ros and stepper motor
+    """
 
     def __init__(self, name, listen_node, stepper_type, config):
 
         if stepper_type == StepperType.Stepper:
             self._config_msg = stepper_msgs.StepperConfig
-            self._position_msg = stepper_msgs.AbsoluteMove
-        elif stepper_type == StepperType.ScrewDriveStepper:
-            self._config_msg = stepper_msgs.ScrewDriveStepperConfig
-            self._position_msg = stepper_msgs.LinearAbsoluteMove
+            self._move_msg = stepper_msgs.StepperMove
+        elif stepper_type == StepperType.LinearStepper:
+            self._config_msg = stepper_msgs.LinearStepperConfig
+            self._move_msg = stepper_msgs.LinearStepperMove
         else:
             raise TypeError(f"{stepper_type} is unrecognized")
 
@@ -321,18 +312,15 @@ class ROS_Stepper(Stepper):
         self.name = name
         self.listen_node = listen_node
         rospy.loginfo(f"Starting {name} listening on {listen_node}")
-        rospy.Subscriber(f"{self.listen_node}", self._position_msg, self.move_callback)
-        self.pub = rospy.Publisher(f"{self.name}_in_motion", Bool, queue_size=10)
-
-    def set_speed(self, new_speed):
-        super().set_speed(new_speed)
-        rospy.loginfo(f"*{self.name}* - Speed set to {self.speed}")
+        rospy.Subscriber(f"{self.listen_node}", self._move_msg, self.move_callback)
+        # self.position = rospy.Publisher(f"{self.name}_pos", )
+        self.in_motion = rospy.Publisher(f"{self.name}_in_motion", Bool, queue_size=10)
 
     def _move(self, amount: int, direction: Direction) -> bool:
         if amount != self.steps:
-            self.pub.publish(True)
+            self.in_motion.publish(True)
             super()._move(amount, direction)
-            self.pub.publish(False)
+            self.in_motion.publish(False)
         else:
             rospy.loginfo(f"*{self.name}* - Motor Already at {self.steps}, no action taken")
 
@@ -350,12 +338,26 @@ class StepperNode(ROS_Stepper, Stepper):
         config_dict = message_converter.convert_ros_message_to_dictionary(config)
         Stepper.__init__(self, **config_dict)
 
-    def move_callback(self, msg):
-        rospy.loginfo(f"*{self.name}* - Moving to {msg.abs_position}, Speed: {msg.speed}")
-        self.set_speed(msg.speed)
-        self.move_abs(msg.abs_position)
+    def set_speed(self, new_speed):
+        Stepper.set_speed(self, new_speed)
+        rospy.loginfo(f"*{self.name}* - Speed set to {self.speed}")
 
-class ScrewDriveStepperNode(ROS_Stepper, ScrewDriveStepper):
+    # TODO Add move types based on message received
+    def move_callback(self, msg: stepper_msgs.LinearStepperMove):
+
+        self.set_speed(msg.speed)
+
+        move_type = MoveType[msg.move_type]
+        if move_type == MoveType.AbsoluteMove:
+            rospy.loginfo(f"*{self.name}* - Absolute Move to {msg.position}, Speed: {msg.speed} {self.units.name}/s")
+            self.move_abs(msg.position)
+        elif move_type == MoveType.RelativeMove:
+            rospy.loginfo(f"*{self.name}* - Relative Move of {msg.position}, Speed: {msg.speed} {self.units.name}/s")
+            self.move_rel(msg.posititon)
+        else:
+            raise TypeError(f"Invalid Move Type of {move_type}")
+
+class LinearStepperNode(ROS_Stepper, LinearStepper):
 
     def __init__(self, name, listen_node, config = None):
 
@@ -364,16 +366,31 @@ class ScrewDriveStepperNode(ROS_Stepper, ScrewDriveStepper):
             name=name,
             listen_node=listen_node,
             config=config,
-            stepper_type=StepperType.ScrewDriveStepper
+            stepper_type=StepperType.LinearStepper
         )
         config_dict = message_converter.convert_ros_message_to_dictionary(config)
-        ScrewDriveStepper.__init__(self, **config_dict)
+        LinearStepper.__init__(self, **config_dict)
 
-    def move_callback(self, msg: stepper_msgs.LinearAbsoluteMove):
-        rospy.loginfo(f"*{self.name}* - Moving to {msg.position}, Speed: {msg.speed}")
+    def set_speed(self, new_speed):
+        LinearStepper.set_speed(self, new_speed)
+        rospy.loginfo(f"*{self.name}* - Speed: RPM-{self.speed:.2f} Linear-{self.linear_speed:.2f} {self.units.name.lower()}/s")
+
+    # TODO Add move types based on message received
+    def move_callback(self, msg: stepper_msgs.LinearStepperMove):
+
+        rospy.loginfo(f"Message Recieved: {msg}")
+
         self.set_speed(msg.speed)
-        self.move_distance(msg.position)
 
+        move_type = MoveType[msg.move_type]
+        if move_type == MoveType.AbsoluteMove:
+            rospy.loginfo(f"*{self.name}* - Absolute Move to {msg.position:.2f}, Speed: {msg.speed} {self.units.name.lower()}/s")
+            self.move_abs(msg.position, UnitSystem[msg.units])
+        elif move_type == MoveType.RelativeMove:
+            rospy.loginfo(f"*{self.name}* - Relative Move of {msg.position:.2f}, Speed: {msg.speed} {self.units.name.lower()}/s")
+            self.move_rel(msg.posititon, UnitSystem[msg.units])
+        else:
+            raise TypeError(f"Invalid Move Type of {move_type}")
 
 
 # if __name__ == "__main__":

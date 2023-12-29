@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/test/devel/include/cartesian_controller/CartesianMove.h"
+  "/home/ubuntu/test/devel/include/cartesian_controller/G1.h"
   "CMakeFiles/cartesian_controller_generate_messages_cpp"
 )
 

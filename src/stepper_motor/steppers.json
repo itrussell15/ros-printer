@@ -2,7 +2,7 @@
   "x_axis": {
     "node_name": "x",
     "listen_name": "cmd_x",
-    "type": "Stepper",
+    "type": "LinearStepper",
     "config": {
       "speed": 100,
       "max_speed": 120,
@@ -11,28 +11,34 @@
       "deccel": 30,
       "step_pin": 38,
       "dir_pin": 40,
-      "steps_per_rev": 200
+      "steps_per_rev": 200,
+      "length": 500,
+      "distance_per_turn": 100,
+      "units": "MM"
     }
   },
   "y_axis": {
     "node_name": "y",
     "listen_name": "cmd_y",
-    "type": "Stepper",
+    "type": "LinearStepper",
     "config": {
       "speed": 100,
       "max_speed": 120,
       "min_speed": 0.5,
       "accel": 30,
       "deccel": 30,
-      "step_pin": 38,
-      "dir_pin": 40,
-      "steps_per_rev": 200
+      "step_pin": 35,
+      "dir_pin": 37,
+      "steps_per_rev": 200,
+      "length": 500,
+      "distance_per_turn": 72,
+      "units": "MM"
     }
   },
   "z_axis": {
     "node_name": "z",
     "listen_name": "cmd_z",
-    "type": "Stepper",
+    "type": "LinearStepper",
     "config": {
       "speed": 100,
       "max_speed": 120,
@@ -41,7 +47,10 @@
       "deccel": 30,
       "step_pin": 38,
       "dir_pin": 40,
-      "steps_per_rev": 200
+      "steps_per_rev": 200,
+      "length": 500,
+      "distance_per_turn": 72,
+      "units": "MM"
     }
   }
 }
